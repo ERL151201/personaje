@@ -12,7 +12,7 @@
 
 <div class="card-columns">
 
-    <app-personaje-tarjeta [personaje]="personaje" [index]=" i " *ngFor="let personaje of personajes; let i=index "> </app-personaje-tarjeta>
+    <app-personaje-tarjeta [personaje]="personaje" [index]=" personaje.idx " *ngFor="let personaje of personajes "> </app-personaje-tarjeta>
 
 
     <div class="card animated fadeIn fast" *ngFor="let personaje of personajes; let i = index">

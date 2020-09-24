@@ -73,11 +73,14 @@ export class PersonajesService{
         let personajesArr:Personaje[] = [];
         termino = termino.toLowerCase();
   
-        for(let personaje of this.personajes){
+        for(let i = 0; i< this.personajes.length; i++){
+
+          let personaje = this.personajes[i];
           
           let nombre = personaje.nombre.toLowerCase();
           
           if(nombre.indexOf(termino) >= 0){
+            personaje.idx = i;
             personajesArr.push(personaje)
           }
         }
@@ -93,4 +96,5 @@ export interface Personaje{
     img: string;
     aparicion: string;
     casa: string;
+    idx?:number;
 };

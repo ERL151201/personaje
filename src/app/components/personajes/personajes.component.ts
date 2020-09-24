@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 })
 export class PersonajesComponent implements OnInit {
-
+  
   personajes:Personaje[] = [];
 
   constructor( private _personajesService:PersonajesService,

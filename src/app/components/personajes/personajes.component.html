@@ -5,7 +5,7 @@
 <div class="card-columns">
 
     <!--*ngFor="let personaje of personajes; let i = index"-->
-    <app-personaje-tarjeta [personaje]="personaje" [index]=" i " *ngFor="let personaje of personajes; let i=index "> </app-personaje-tarjeta>
+    <app-personaje-tarjeta (personajeSeleccionado)="verPersonaje($event)" [personaje]="personaje" [index]=" i " *ngFor="let personaje of personajes; let i=index "> </app-personaje-tarjeta>
 
 
 
