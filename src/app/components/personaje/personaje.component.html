@@ -1,0 +1,32 @@
+<h1 class="animated fadeIn">{{ personaje.nombre | uppercase}} <small>({{personaje.aparicion | date: 'y'}})</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+
+    <div class="col-md-4">
+
+        <img [src]="personaje.img" class="img-fluid" [alt]="personaje.nombre">
+        <br><br>
+
+        <a [routerLink]="['/personajes']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{personaje.nombre}}</h3>
+        <hr>
+        <p>
+            {{personaje.bio}}
+        </p>
+        <div>
+            <img *ngIf="personaje.casa=='Midgard'" class="img-logo" src="assets/img/midgard.jpg" alt="">
+            <img *ngIf="personaje.casa=='Ciudad de Detroit'" class="img-logo" src="assets/img/detroit.jpg" alt="">
+            <img *ngIf="personaje.casa=='Ubisoft'" class="img-logo" src="assets/img/logo.jpg" alt="">
+            <img *ngIf="personaje.casa=='Marvel'" class="img-logo" src="assets/img/marvel.png" alt="">
+            <img *ngIf="personaje.casa=='Isla Wumpa'" class="img-logo" src="assets/img/wumpa.jpg" alt="">
+
+        </div>
+
+    </div>
+
+</div>
