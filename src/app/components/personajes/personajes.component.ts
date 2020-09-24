@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-personajes',
   templateUrl: './personajes.component.html',
-  styles: [
-  ]
+
 })
 export class PersonajesComponent implements OnInit {
 
@@ -22,6 +21,7 @@ export class PersonajesComponent implements OnInit {
 
     
   }
+ 
   verPersonaje(idx:number){
     this.router.navigate( ['/personaje', idx]);
     

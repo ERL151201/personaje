@@ -14,9 +14,9 @@ export class PersonajeComponent  {
     ) { 
 
     this.activatedRoute.params.subscribe(params =>{
-      console.log(params ['id']);
-      this.personaje = this._personajesService.getPersonaje(params['id']);
-    })
+        this.personaje = this._personajesService.getPersonaje(params['id'] );
+    });
+  
   }
 
   
